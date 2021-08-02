@@ -32,6 +32,8 @@
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -40,19 +42,58 @@
 </head>
 <style type="text/css">
 .video-responsive {
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	position: relative;
-	}
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    }
 .video-responsive iframe, .video-responsive object, .video-responsive embed {
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	}
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    }
+
+
+
+h1{
+   margin: 0 0 15px 0;
+   color: white;
+   font-size: 28px;
+   font-weight: 700;
+   font-family: 'Poppins',sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1.2px;
+}
+.more{
+   display: none;
+}
+.post{
+   color: #e5e5e5;
+   font-size: 18px;
+   text-align: justify;
+   line-height: 25px;
+   font-family: 'Work Sans',sans-serif;
+}
+.post:not(:last-child){
+   margin-bottom: 30px;
+}
+#idbut{
+    border: 2px solid black;
+   margin-top: 15px;
+   display: block;
+   background-color: white;
+   color: white;
+    width: 250px; 
+  margin: 0 auto; 
+   outline: none;
+   padding: 8px 20px;
+   text-transform: capitalize;
+   cursor: pointer;
+   font-size: 20px;
+}
 </style>
 <body class="host_version" > 
 
@@ -134,33 +175,31 @@
 	</div>
 
     <!-- LOADER -->
-	<div id="preloader" style="background-color:#289438;">
-		<div class="loader-container">
-			<div class="progress-br float shadow">
-				<div class="progress__item"></div>
-			</div>
-		</div>
-	</div>
+	
 	<!-- END LOADER -->	
 	<!-- Start header -->
 	<header class="top-navbar" style="background-color:#ffffff;">
         <nav class="navbar navbar-expand-lg navbar-light " style="background-color:#ffffff;" >
             <div class="container-fluid" style="background-color:#ffffff;">
-                <a class="navbar-brand" href="index.html" style="background-color:#ffffff;">
-                    <img width="400" height="102" src="images/logonegro.png" alt=""  />
+                <a  style="max-width:80%;width:auto;height:102px;" class="navbar-brand" href="index.html" style="background-color:#ffffff;">
+                    <img style="max-width:100%;width:auto;height:102px;"  src="images/logos.png" alt=""  />
+
                 </a>
-                <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                
+                    <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbars-host" style="color:#000000;">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="index.html" style="color:#000000;">ACERCA DE LA CUMBRE</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color:#000000;">POCISION DE BOLIVIA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color:#000000;">DIALOGOS NACIONALES </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color:#000000;">NOTICIAS </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color:#000000;">MAS INFORMACION</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="boli_cumbre.html" style="color:#3EA635;">BOLIVIA EN LA CUMBRE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="dial_nacion.html" style="color:#3EA635;">DIÁLOGOS NACIONALES </a></li>
+                        <li class="nav-item"><a class="nav-link" href="dato_indica.html" style="color:#3EA635;">DATOS E INDICADORES </a></li>
+                        <li class="nav-item"><a class="nav-link" href="comunicacion.html" style="color:#3EA635;">COMUNICACIÓN</a></li>
+                        <li class="nav-item"><a class="nav-link" href="informacion.html" style="color:#3EA635;">MÁS INFORMACION</a></li>
                         
                 
                 </div>
@@ -177,7 +216,7 @@
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
-				<div id="home" class="first-section" style="background-image:url('images/Banner.png');">
+				<div id="home" class="first-section" style="background-image:url('images/inicio/Home_Banner1.png');">
 					<div class="dtab">
 						<div class="container">
 							<div class="row">
@@ -194,17 +233,15 @@
 				</div><!-- end section -->
 			</div>
 			<div class="carousel-item">
-				<div id="home" class="first-section" style="background-image:url('images/slider-02.jpg');">
+				<div id="home" class="first-section" style="background-image:url('images/inicio/Home_Banner2.png');">
 					<div class="dtab">
 						<div class="container">
 							<div class="row">
-								<div class="col-md-12 col-sm-12 text-left">
+								<div class="col-md-4 col-sm-12 text-left">
 									<div class="big-tagline">
-										<h2 data-animation="animated zoomInRight">Find the right <strong>Hosting</strong></h2>
-										<p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="#" class="hover-btn-new"><span>Read More</span></a>
+										<h3> PORTAL WEB INFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</h3>
+									<p class="lead">PORTAL WEB NFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</p>
+											
 									</div>
 								</div>
 							</div><!-- end row -->            
@@ -213,19 +250,49 @@
 				</div><!-- end section -->
 			</div>
 			<div class="carousel-item">
-				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
+				<div id="home" class="first-section" style="background-image:url('images/inicio/Home_Banner3.png');">
 					<div class="dtab">
 						<div class="container">
 							<div class="row">
-								<div class="col-md-12 col-sm-12 text-center">
+								<div class="col-md-4 col-sm-12 text-left">
 									<div class="big-tagline">
-										<h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company</h2>
-										<p class="lead" data-animation="animated fadeInLeft">1 IP included with each server 
-											Your Choice of any OS (CentOS, Windows, Debian, Fedora)
-											FREE Reboots</p>
-											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<a href="#" class="hover-btn-new"><span>Read More</span></a>
+										<h3> PORTAL WEB INFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</h3>
+									<p class="lead">PORTAL WEB NFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</p>
+											
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/inicio/Home_Banner4.png');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h3> PORTAL WEB INFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</h3>
+									<p class="lead">PORTAL WEB NFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</p>
+											
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/inicio/Home_Banner5.png');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h3> PORTAL WEB INFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</h3>
+									<p class="lead">PORTAL WEB NFORMATIVO DE BOLIVIA RUMBO A LA CUMBRE SOBRE LOS SISTEMAS ALIMENTARIOS DE NACIONES UNIDAS</p>
+											
 									</div>
 								</div>
 							</div><!-- end row -->            
@@ -248,6 +315,7 @@
 	</div>
 	
 	
+	
 	<div id="domain" class="section wb">
         <div class="container">
             <div class="row text-center">
@@ -255,10 +323,14 @@
                 
 				<div class="col-lg-12">
                     <div class="customwidget text-left">
-                        <h1>TITULO</h1>
-                        <p>Gracias a la Cumbre, el mundo cobrará conciencia de que debemos trabajar todos juntos para transformar la forma en que producimos, consumimos y concebimos los alimentos. Es una cumbre para todos, dondequiera que estemos, una cumbre de los pueblos. También es una cumbre de soluciones que requerirá que todos adoptemos medidas para transformar los sistemas alimentarios del mundo.</p>
-						<p>Pursuing high quality standards, my greatest efforts are focused on producing semantic, SEO-friendly, valid and clean code. In order to stay effective and relevant in this constantly evolving sphere I always try to be in touch with the latest news and recent approaches in programming.</p>
+                        <h1>Párrafo descriptivo del proceso de Bolivia rumbo a la Cumbre </h1>
+                        <p>El Estado Plurinacional de Bolivia participará de la Cumbre sobre Sistemas Alimentarios con una propuesta que reivindica los sistemas tradicionales como el futuro y la respuesta a las grandes preocupaciones del mundo. </p>
+                        <span class="dots">...</span>
+                            <span class="more">
+						<p>Y reconoce la importancia de otros sistemas que también aportan al logro de los Objetivos de Desarrollo Sostenible. Esta posición es el resultado de un proceso inclusivo y diverso, que recoge la voz de organizaciones sociales, representantes de los 36 pueblos indígenas originarios campesinos, academia, industria y sociedad civil, con una fuerte presencia de mujeres y jóvenes.</p>
                         
+                        </span>
+                        <button  id="idbut" class="read" style="color:#3EA635;border-color: #3EA635;"   >Más Información</button>
                     </div>
                 </div>
 				
@@ -277,7 +349,7 @@
 	</section>
 
 
-    <div id="hosting" class="section wb" style="background: rgb(248, 248, 248)">
+    <div id="hosting" class="section wb" style="background-color:#D5D8DC;">
         <div class="container">
             <div class="section-title text-center">
                 <h3>Noticias</h3>
@@ -285,9 +357,9 @@
             </div><!-- end title -->
 
             <div class="row dev-list text-center">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <div class="widget server clearfix">
-                        <img src="images/hosting_01.jpg" alt="" class="img-fluid">
+                <div  class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="widget server clearfix" style="border-color:#D5D8DC;">
+                        <img src="images/COMUNICACION/Foto1.png" alt="" class="img-fluid">
 						<div class="inner-dit" style="background-color:white;">
 							<div class="widget-title">
 								<h3 style="color:black;">TITULO NOTICIA</h3>
@@ -295,6 +367,14 @@
 							</div>
 							<!-- end title -->
 							<p style="color:black;">Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true dont miss this one!</p>
+
+							 <span class="dots">...</span>
+                            <span class="more">
+
+                            <p style="color:black;">Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true dont miss this one!</p>
+
+                            	</span>
+                        <button  id="idbut" class="read" style="color:#3EA635;border-color: #3EA635;"   >Más Información</button>
 						</div>
 						
 
@@ -302,8 +382,8 @@
                 </div><!-- end col -->
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                    <div class="widget server clearfix">
-                        <img src="images/hosting_02.jpg" alt="" class="img-fluid">
+                    <div class="widget server clearfix" style="border-color:#D5D8DC;">
+                        <img src="images/COMUNICACION/Foto2.png" alt="" class="img-fluid">
 						<div class="inner-dit" style="background-color:white;">
 							<div class="widget-title">
 								<h3 style="color:black;">TITULO NOTICIA</h3>
@@ -311,6 +391,14 @@
 							</div>
 							<!-- end title -->
 							<p style="color:black;">Internet lorem Ipsum generators on the tend to repeat predefined chunks as necessary, finally its release!</p>
+
+							<span class="dots">...</span>
+                            <span class="more">
+
+                            <p style="color:black;">Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true dont miss this one!</p>
+
+                            	</span>
+                        <button  id="idbut" class="read" style="color:#3EA635;border-color: #3EA635;"   >Más Información</button>
 						</div>
 
                         
@@ -319,8 +407,8 @@
                 </div><!-- end col -->
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s" >
-                    <div class="widget server clearfix">
-                        <img src="images/hosting_03.jpg" alt="" class="img-fluid">
+                    <div class="widget server clearfix" style="border-color:#D5D8DC;">
+                        <img src="images/COMUNICACION/Foto3.png" alt="" class="img-fluid">
 						<div class="inner-dit" style="background-color:white;">
 							<div class="widget-title" >
 								<h3 style="color:black;">TITULO NOTICIA</h3>
@@ -328,6 +416,14 @@
 							</div>
 							<!-- end title -->
 							<p style="color:black;">Predefined internet lorem Ipsum generators on the tend to repeat chunks as necessary, true and more..</p>
+
+							<span class="dots">...</span>
+                            <span class="more">
+
+                            <p style="color:black;">Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true dont miss this one!</p>
+
+                            	</span>
+                        <button  id="idbut" class="read" style="color:#3EA635;border-color: #3EA635;"   >Más Información</button>
 						</div>
 						
                         
@@ -339,28 +435,138 @@
     </div><!-- end section -->
     
 
-    <div class="copyrights">
+    <div id="overviews" class="section lb">
+        <div class="container">
+            
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>2018 BEST WEB HOSTING COMPANY</h4>
+                        <h2>Awards Winner Support Center</h2>
+                        <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+
+                        <span class="dots">...</span>
+                            <span class="more">
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
+</span>
+                        <button  id="idbut" class="read" style="color:#3EA635;border-color: #3EA635;"   >Más Información</button>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/COMUNICACION/Foto4.png" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/COMUNICACION/Foto6.png" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+                
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box" class="post">
+                        <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                            <span class="dots">...</span>
+                            <span class="more">
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
+</span>
+                        <button  id="idbut" class="read" style="color:#3EA635;border-color: #3EA635;"   >Más Información</button>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+                
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+    <div class="copyrights" style="background-color:#D5D8DC;">
         <div class="container">
             <div class="footer-distributed">
-                <div class="footer-left">                   
-                    <p class="footer-company-name"><a href="#">Naciones Unidas</a></p>
+                <div class="footer-left"> 
+                    <img style="max-width:100%;width:auto;height:51px;"  src="images/logos.png" alt=""  />                  
+                   <a href="#"></a>
+                	 <p class="footer-company-name">
+                </p>
                 </div>
 
                 <div class="footer-right">
                     <ul class="footer-links-soi">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-github"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-						<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+						
 					</ul><!-- end links -->
+					<a href="#" class="hover-btn-new"><img style="max-width:100%;width:150px;height:30px;" src="images/inicio/boton_contacto.png"></a>
                 </div>
+                <div class="footer-right">
+                    <ul class="footer-links-soi">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li><a href="#" style="background-color:#D5D8DC;"><i  class="fa fa-space"></i></a></li>
+						
+					</ul><!-- end links -->
+					
+                </div>
+                
             </div>
+
         </div><!-- end container -->
+
     </div><!-- end copyrights -->
+
+    <div id="domain" class="section wb" style="background-color:#5d5b56;">
+        <div class="container">
+            <div class="row text-center">
+
+                
+				<div class="col-lg-12">
+                    <div class="customwidget text-center" style="color:white;">
+                        
+                        <p>Portal Web informativo sobre el proceso del Estado Plurinacional de Bolivia rumbo a la Cumbre de las Naciones Unidas sobre los Sistemas Alimentarios 2021.
+</p>
+						<p>Sitio desarrollado por el Ministerio de Relaciones Exteriores de Bolivia y el Sistema de las Naciones Unidas en Bolivia. Todos los derechos reservados. 
+</p>
+                        
+                    </div>
+                </div>
+				
+                <!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+
+    
+
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
+<script >
+         $(document).ready(function(){
+   $(".read").click(function(){
+      $(this).prev().toggle();
+      $(this).siblings('.dots').toggle();
+      if($(this).text()=='Más Información'){
+    $(this).text('ocultar');
+      }
+      else{
+    $(this).text('Más Información');
+      }
+   });
+});
+        </script>
+    <script src="js/all.js">
+        
+       
+    </script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
     <!-- ALL PLUGINS -->
